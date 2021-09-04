@@ -17,7 +17,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: Arial, Helvetica, sans-serif ;
+	font-family: Arial, Helvetica, sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -48,14 +48,25 @@ table {
 /* css reset end */
 
 body {
-    /* font-family: Arial, Helvetica, sans-serif; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: whitesmoke;
+    padding-bottom: 60px;
 }
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: monospace;
     color: #1f1b1b;
     border-bottom: 2px solid rgba(0,0,0,0.125);
+}
+h1 {
+    font-size: larger;
+}
+h2 {
+    font-size: large;
+}
+h3 {
+    font-size: medium;
+}
+h4 {
+    font-size: small;
 }
 
 header {
@@ -101,7 +112,6 @@ header nav ul li a:hover {
     justify-content: center;
 }
 table {
-    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
@@ -116,6 +126,7 @@ tr:nth-child(even){
     background-color: darkgoldenrod;
 }
 
+
 #logo {
     display: block;
     width: 50%;
@@ -128,16 +139,57 @@ tr:nth-child(even){
 
 }
 section {
-    padding:8px;
+
+    padding:20px 10px;
 }
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     height: 50px;
     width: 100%;
     padding: 8px 0;
-    background-color: tomato;
+    background-color: rgb(255, 175, 71);
     text-align: center;
 
+}
+
+/* Services - Flexbox */
+.liquid-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.liquid-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    padding: 6px 10px;
+    border: 2px dashed rgba(0,0,0,0.125);
+    margin: 10px;
+}
+
+.liquid-cols {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.liquid-row {
+    display: flex;
+    border: 2px dashed rgba(0,0,0,0.125); 
+    margin: 5px;
+}
+
+.row-content {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
 }
