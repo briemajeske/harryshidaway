@@ -7,6 +7,50 @@ This is my contact us file, which is going to give to provide information on how
     <meta name="Keywords" content="Pub, resturant, Meridian, food" />
     <title>Harry's Hidaway</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- Survey form -->
+    <style>
+        form{
+            background-color: antiquewhite;
+            margin: auto;
+            position: relative;
+            width: 550px;
+            height: 550px;
+            padding: 2px;
+            border-radius: 10px;
+        }
+
+        input{
+            height: 30px;
+            width: 400px;
+            display: block;
+            border: 2px solid;
+        }
+        select{ 
+            height: 30px;
+            width: 400px;
+            display: block;
+            border: 2px solid;
+        }
+        textarea{
+            height: 30px;
+            width: 400px;
+            display: block;
+            border: 2px solid;
+        }
+        button{
+            height: 30px;
+            width: 400px;
+            display: block;
+            border: 2px solid;
+            position: relative;
+            top: 9px;
+            left: 80px;
+        }
+        legend{
+            font-size: 20px;
+            background-color: burlywood;width: 100%; padding: 5px;
+        }
+    </style>
 </head>
 
 <!--Content including necessary links-->
@@ -69,8 +113,47 @@ This is my contact us file, which is going to give to provide information on how
             </div>
         </article>
         </section>
+        </section>
+        <form action="response_page.php" method="post">
 
-    </section>
+            <h1>
+                Survey form
+            </h1>
+            <fieldset>
+                <legend> Give us your Feedback! </legend>
+            <label for="fname">FirstName:</label>
+            <input type="text" name="firstname" id="fname">
+        
+            <label for= "lname">LastName:</label>
+            <input type="text" name="lastname" id="lname">
+        
+            <label for="male">Select gender: Male</label>
+            <input type="radio" name="sex" id="male">
+        
+            <label for="female">Select gender: Female</label>
+            <input type="radio" name="sex" id="female">
+                </fieldset>
+            
+            <fieldset>    
+                <legend>Contact details</legend>
+            <label for="city">City:</label>
+            <select name="city" id="city">
+                <option value="Lancaster">Lancaster</option>
+                <option value="Reno">Reno</option>
+                <option value="Star">Star</option>
+            </select>
+            <label for="state">State:</label>
+            <select name="state" id="state">
+                <option value="California">California</option>
+                <option value="Nevada">Nevada</option>
+                <option value="Idaho">Idaho</option>
+            </select>
+            <label for="customer feedback">Customer feedback:</label>
+            <textarea rows="1" cols="30" name="customer feedback" id="customer feedback"></textarea>
+        </fieldset>
+        <button>Submit</button>
+        </form>
+    
     
     <!--Secondary navigation, copyright notice,etc. 
     Note footer needs to be inside the body-->
@@ -78,4 +161,5 @@ This is my contact us file, which is going to give to provide information on how
     </footer>
 
 </body>
+
 </html>
