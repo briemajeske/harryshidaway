@@ -35,22 +35,50 @@ This is my gallery file, which is going to display images of food and services.-
                     <a href="contact_us.html">contact us</a> 
                  </li>
              </ul>
-         </nav>    
+         </nav>  
     </header>
     <section>
         <!-- This is where main page content goes -->
-        <h2>This is the section header</h2>
-        <article>
-        <h3>This is the article header</h3>
+        <p> Harry is an adventurous soul.When you visit Harry's Hidaway we want you to be emersed in a 
+            fun loving atmosphere,hidaway from the rest of the World.
+        </p>
+        
+        <!--Trigger the Modal-->
+        <div class="gallery">
+                <img onclick="showImgModal(this)" src="karaoke.jpg" alt="karaoke image">
+                <audio class="audio" src="karaoke.mp4"></audio>
+            
+                <img onclick="showImgModal(this)" src="motorcycles.jpg" alt="motorcyles image">
+                <audio class="audio" src="motorcycle-sound.mp3"></audio>
+            
+                <img onclick="showImgModal(this)" src="wedding.jpg" alt="wedding image">
+                <audio class="audio" src="wedding2.mp4"></audio>
+        </div>
+        
 
-        </article>
+        <!-- hidden modal -->
+        <div id="galleryModal" class="modal">
+           <span class="close">&times;</span>
+           <!-- modal content/image -->
+           <img class="modal-content" id="img01">
+            <!-- modal caption/text -->
+            <div id="caption"></div>
+        </div>
+
+        
 
     </section>
-    
+    <section class="videos">
+        <iframe id="galleryVideo" src="https://www.youtube.com/embed/jcFKnJE6-Hs?start=11" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </section>
     <!--Secondary navigation, copyright notice,etc. 
     Note footer needs to be inside the body-->
     <footer> Harry's Hidaway &#8226;1234 Yumfood Drive, Meridian ID &nbsp; 83642 &#8226; 208-789-1234
     </footer>
 
+    <script src="modal.js"></script>
 </body>
 </html>
