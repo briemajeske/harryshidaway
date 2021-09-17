@@ -12,6 +12,9 @@ const handleSubmit = (e) => {
     method: 'POST',
     headers: { "Content-Type": "multipart/form-data" },
     body: new URLSearchParams(formData).toString()
-  }).then(() => console.log('Form successfully submitted')).catch((error) =>
+  }).then((res) => {
+    console.log('Form successfully submitted')
+    console.log("response is", res);
+}).catch((error) =>
     alert(error))
 }
