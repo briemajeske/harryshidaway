@@ -4,8 +4,7 @@ window.addEventListener('load', function () {
   
 
 const handleSubmit = (e) => {
-    console.log('submit fired');
-  e.preventDefault()
+    e.preventDefault();
   let myForm = document.getElementById('contactForm');
   let formData = new FormData(myForm)
   fetch('/', {
@@ -15,6 +14,19 @@ const handleSubmit = (e) => {
   }).then((res) => {
     console.log('Form successfully submitted')
     console.log("response is", res);
+    formSubmittedSuccess(e);
 }).catch((error) =>
-    alert(error))
+    alert("There was a problem submitting your form"));
+}
+
+const formSubmittedSuccess = (e) => {
+    let myForm = document.getElementById('contactForm');
+    myForm.reset();
+    let successMsg = document.createElement("p");
+    let msg = document.createTextNode("Thanks for submitting feedback!");
+    successMsg.append(msg);
+    successMsg.setAttribute("class", "thankyou-message");
+    myForm.appendChild(successMsg);
+    e.preventDefault();
+    return false;
 }
