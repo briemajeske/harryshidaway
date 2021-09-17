@@ -17,6 +17,7 @@ const handleSubmit = (e) => {
     console.log('Form successfully submitted')
     console.log("response is", res);
     formSubmittedSuccess(firstname);
+    return false;
 }).catch((error) =>
     alert("There was a problem submitting your form"));
 }
@@ -29,6 +30,5 @@ const formSubmittedSuccess = (firstname) => {
     successMsg.append(msg);
     successMsg.setAttribute("class", "thankyou-message");
     myForm.appendChild(successMsg);
-    e.preventDefault();
     return false;
 }
